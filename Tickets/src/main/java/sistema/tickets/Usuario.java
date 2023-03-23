@@ -10,6 +10,7 @@ import java.util.Arrays;
 /**
  *
  * @author Yan
+ * holi:p
  */
 public class Usuario {
     String rut;
