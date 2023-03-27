@@ -4,21 +4,24 @@
  * and open the template in the editor.
  */
 package sistema.tickets;
-
+import java.util.Scanner;
+import java.io.*;
+import java.util.Arrays;
 /**
  *
  * @author Yan
  */
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Usuario usuario = new Usuario();
-        usuario.setRut("12.233");
-        usuario.setCorreo("Hola@gmail.com");
-        usuario.printear();
+        Scanner sc =new Scanner(System.in);
+        Registros usuarios =new Registros();
+        usuarios.base("Datos.txt");
+        int cantidadUsuarios =  usuarios.getTamaño();
+        usuarios.printear(cantidadUsuarios);
+        System.out.println("Ingrese su correo:");
+        String correo = sc.nextLine();
+        System.out.println("Ingrese su contraseña:");
+        String contraseña = sc.nextLine();
+        System.out.println("termine");
     }
-    
 }
